@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Leaflet map styling */
+.leaflet-container {
+  height: 100vh;
+  width: 100%;
+}
+
+/* Custom marker styles */
+.webcam-marker {
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.marker-excellent {
+  background-color: #10B981;
+}
+
+.marker-good {
+  background-color: #34D399;
+}
+
+.marker-moderate {
+  background-color: #FBBF24;
+}
+
+.marker-poor {
+  background-color: #F87171;
+}
+
+.marker-very-poor {
+  background-color: #EF4444;
+}
+
+/* Loading animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Status indicators */
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-online {
+  background-color: #10B981;
+}
+
+.status-offline {
+  background-color: #EF4444;
+}
+
+.status-loading {
+  background-color: #FBBF24;
+  animation: pulse 1s infinite;
+}
