@@ -1,0 +1,23 @@
+[
+  {
+    "id": "demo-1",
+    "name": "Demo Cam 1",
+    "latitude": 47.6062,
+    "longitude": -122.3321,
+    "image_url": "https://picsum.photos/seed/cam1/640/360.jpg"
+  },
+  {
+    "id": "demo-2",
+    "name": "Demo Cam 2",
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "image_url": "https://picsum.photos/seed/cam2/640/360.jpg"
+  },
+  {
+    "id": "demo-3",
+    "name": "Demo Cam 3",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "image_url": "https://picsum.photos/seed/cam3/640/360.jpg"
+  }
+]

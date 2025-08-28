@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - FETCH_INTERVAL_SEC=60
+      - WEBCAMS_CONFIG_PATH=/app/webcams.json
+      - ALLOW_ORIGINS=*
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
